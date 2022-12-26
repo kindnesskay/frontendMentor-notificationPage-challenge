@@ -114,6 +114,7 @@ function new_notification(data) {
   let pictureFrame = document.createElement("div");
   pictureFrame.className = "pic_frame";
   let avatar_src = document.createElement("img");
+  avatar_src.alt=data.name;
   avatar_src.src = data.avatar;
   pictureFrame.appendChild(avatar_src);
 
