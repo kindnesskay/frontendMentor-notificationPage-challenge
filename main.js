@@ -143,6 +143,7 @@ function new_notification(data) {
   if (data.refrence_src) {
     inner_div.className = "inner_div_rev";
     let ref_box = document.createElement("img");
+    ref_box.alt=data.name;
     ref_box.className = "ref_src";
     ref_box.src = data.refrence_src;
     inner_div.appendChild(ref_box);
