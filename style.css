@@ -29,6 +29,7 @@ img {
 .top {
   display: flex;
   width:inherit;
+  height: 6%;
   align-items: center;
   justify-content: space-between;
 }
@@ -44,6 +45,7 @@ img {
 }
 .notification {
   width: 100%;
+  min-height: 12%;
   margin-top: 5px;
   position: relative;
   border-radius: 10px;
