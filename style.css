@@ -1,117 +1,136 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family:Arial;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica;
 }
-button{
-    width: 150px;
-    display: flex;
-}
-p .red_alert .reference::after {
-        display: inline-block;
-        content: " ";
-        height: 7px;
-        width: 7px;
-        margin-left: 2px;
-        border-radius: 50%;
-        background-color:red;
-}
-img{
-    height: 100%;
-    width: 100%;
-}
-    /*MAIN STYLE*/
-#container{
-    
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-bottom: 10px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.inner_div{
-    padding-top: 10px;
-    display: flex;
-    height: 100%;
-    width: 80%;
-    margin-left:60px;
-    position: relative;
-    
-}
-.inner_div_rev{
-    padding-top: 10px;
-    height: 100%;
-    width: 80%;
-    margin-left:60px;
-
-}
-.new_notification{
-    height: 70px;
-    width: 100%;
-    margin-top:5px;
-    position: relative;
-    background-color: rgba(115,150,224,0.1);
-    border-radius: 10px;
-    position: relative;
-    padding-left: 10px;
-}
-.new_notification:hover{
-    background-color:rgba(115, 150, 224, 0.5);
+body {
+  position: relative;
+  background-color: rgb(241, 235, 235);
+  overflow: hidden;
 }
 
-.read_notification{
-    background-color: transparent;
+img {
+  height: 100%;
+  width: 100%;
+}
+/*MAIN STYLE*/
+#container {
+  position: relative;
+  padding: 5px;
+  max-height: 100vh;
+  background-color: rgb(255, 255, 255);
+  max-width: 600px;
+  min-width: 240px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: auto;
+}
+.top {
+  display: flex;
+  width:inherit;
+  align-items: center;
+  justify-content: space-between;
+}
+.top button {
+  position: relative;
+  height: 100%;
+  border: none;
+  padding-top: 2%;
+  text-align: center;
+  width: fit-content;
+  color: hsl(218, 6%, 35%);
+  background-color: transparent;
+}
+.notification {
+  width: 100%;
+  margin-top: 5px;
+  position: relative;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+}
+.notification:hover {
+  background-color: rgba(115, 150, 224, 0.5);
+}
+.inner_div {
+  padding-top: 10px;
+  height: 100%;
+  width: 80%;
+  position: relative;
 }
 
-.name{
-    color:hsl(224, 21%, 14%);
-    font-weight: bold;
-    font-size: 15px;
-    margin-right: 5px;
+/* picture refrence for notification */
+.inner_div_rev {
+  padding-top: 10px;
+  height: 100%;
+  width: 80%;
+}
+.ref_src {
+  height: 40px;
+  width: 40px;
+  float: right;
 }
 
-.data{
-    margin-right: 5px;
-    color:hsl(219, 14%, 63%);
-    font-weight:bold;
-    font-size:15px;
+.name {
+  color: hsl(224, 21%, 14%);
+  font-weight: bold;
+  font-size: 15px;
 }
 
-.reference{
-    color:hsl(219, 12%, 42%);
-    font-weight:bold;
-    font-size: 15px;
+.data {
+  color: hsl(219, 14%, 63%);
+  font-weight: bold;
+  font-size: 15px;
+  margin-left: 1%;
 }
-.ref_src{
-    margin-top: 5px;
-    height:40px;
-    width: 40px;
-    float: right;
+.timeStamp {
+  color: lightslategray;
+  font-family: monospace;
 }
-.pic_frame{
-    height:50px;
-    width:50px;
-    border-radius: 50%;
-    position: absolute;
-    top:50%;
-    transform: translateY(-50%);
-
+.timeStamp::after {
+  content: "m ago";
+}
+.reference {
+  color: hsl(219, 12%, 42%);
+  font-weight: bold;
+  font-size: 15px;
+  margin-left: 1%;
 }
 
-.notify{
-    height: 100%;
-    margin-right:5px ;
-    width: 10px;
-    position: absolute;
-    top:50%;
-    right: 0;
-    transform: translateY(-50%);
-    display: flex;
-
+/* hold profile picture */
+.pic_frame {
+  height: 10vw;
+  width: 10vw;
+  max-height: 50px;
+  max-width: 50px;
+  border-radius: 50%;
 }
-.red_alert{
-  
+/* style for unread notification */
+.newNotification {
+  background-color: rgba(115, 150, 224, 0.1);
+}
 
+.newNotification p::after {
+  display: inline-block;
+  content: " ";
+  height: 7px;
+  width: 7px;
+  margin-left: 2px;
+  border-radius: 50%;
+  background-color: red;
+}
+/* notification counter */
+#counter {
+  background-color: rgb(16, 16, 134);
+  color: white;
+  margin-left: 2px;
+  border-radius: 20%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.top h3 {
+  display: flex;
 }
