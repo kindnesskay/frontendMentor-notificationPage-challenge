@@ -9,7 +9,7 @@ Your users should be able to:
 
 #Features 
 - Mark all as read
-- Notification couner
+- Notification counter 
 - woking time stamp in minutes
 - click notification to mark as read
 - Notifications can be added dynamically with javascript 
